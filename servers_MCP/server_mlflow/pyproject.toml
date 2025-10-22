@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-server-mlflow"
+version = "0.1.0"
+description = "MLflow MCP Server for experiment tracking"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "pandas>=2.0.0",
+    "requests>=2.31.0",
+    "mlflow>=2.13.0,<3.0.0",
+    "pyarrow>=13.0.0,<16.0.0",
+]
+
+[project.scripts]
+mcp-server-mlflow = "server:main"
+
+[tool.setuptools]
+py-modules = ["server", "config", "tools_MLflower"]
