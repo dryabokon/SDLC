@@ -1,0 +1,1 @@
+uv run mlflow server --backend-store-uri file:///%cd%/mlruns --default-artifact-root file:///%cd%/artifacts --host 0.0.0.0 --port 5000
